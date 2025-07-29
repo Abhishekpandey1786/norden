@@ -1,5 +1,5 @@
 import React from "react";
-
+import img5 from './images/l2.png'
 function Call() {
   return (
     <div className="bg-white min-h-screen flex items-center justify-center px-4 py-10">
@@ -7,7 +7,7 @@ function Call() {
         
         {/* Norton Logo */}
         <img
-          src="src\assets\images\l2.png"
+          src={img5}
           alt="Norton Support"
           className="w-full max-w-[500px] object-contain"
         />
