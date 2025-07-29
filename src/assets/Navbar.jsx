@@ -104,12 +104,12 @@ function Navbar() {
           </Link>
 
           <li className="hover:text-blue-100 cursor-pointer whitespace-nowrap hover:active:scale-75">
-            Call Now:
+            
             <a
               href="tel:+18339505496"
               className="text-lg sm:text-xl font-bold text-white"
             >
-              +1 (833) 950-5496
+             Call Now: +1 (833) 950-5496
             </a>
           </li>
         </ul>
