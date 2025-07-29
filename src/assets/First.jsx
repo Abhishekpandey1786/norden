@@ -4,18 +4,19 @@ import img3 from "./images/img3.jpg";
 import img4 from "./images/img4.png";
 import img5 from "./images/img5.png";
 import img6 from "./images/img6.png";
+import img7 from "./images/l2.png";
 import { Link } from "react-router-dom";
-import { useCart } from '../contexts/CartContext.jsx';
-import { FaPhoneAlt } from 'react-icons/fa';
+import { useCart } from "../contexts/CartContext.jsx";
+import { FaPhoneAlt } from "react-icons/fa";
 
 function First() {
-   const { addToCart } = useCart();
-      const handleAddToCart = (product) => {
-      // When adding to cart, make sure the price is a number, not a string with '$'
-      const numericPrice = parseFloat(product.price.replace('$', ''));
-      addToCart({ ...product, price: numericPrice }); // Pass product with numeric price
-      alert(`${product.title} has been added to your cart!`);
-    };
+  const { addToCart } = useCart();
+  const handleAddToCart = (product) => {
+    // When adding to cart, make sure the price is a number, not a string with '$'
+    const numericPrice = parseFloat(product.price.replace("$", ""));
+    addToCart({ ...product, price: numericPrice }); // Pass product with numeric price
+    alert(`${product.title} has been added to your cart!`);
+  };
   const products = [
     {
       id: 1,
@@ -104,78 +105,105 @@ function First() {
   ];
 
   return (
-   <div className="p-4 sm:p-6 md:p-10 bg-gray-50 min-h-screen space-y-10">
-  {/* Banner Section */}
-  <div className="w-full flex justify-center">
-    <img
-      src={img2}
-      alt="Banner"
-      className="w-full max-w-6xl h-auto object-cover rounded-xl shadow-lg"
-    />
-  </div>
-
-  {/* Product Grid */}
-  <div className="px-2 sm:px-4 md:px-10">
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      {products.map((product) => (
-        <div
-          key={product.id}
-          className="bg-white p-4 sm:p-5 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
-        >
+    <div className="p-4 sm:p-6 md:p-10 bg-gray-50 min-h-screen space-y-10">
+      <div className="w-full flex justify-center">
+        <div className="bg-white shadow-xl rounded-xl p-6 max-w-3xl w-full flex flex-col items-center space-y-6">
           <img
-            src={product.image}
-            alt={product.title}
-            className="h-40 sm:h-48 w-full object-contain mb-3 sm:mb-4 rounded-lg"
+            src={img7}
+            alt="Norton Support"
+            className="w-full max-w-[500px] object-contain"
           />
-          <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
-            {product.title}
-          </h3>
-          <div className="text-sm sm:text-md mb-3">
-            <span className="line-through text-gray-400 mr-2">
-              {product.oldPrice}
-            </span>
-            <span className="text-black font-bold text-lg sm:text-xl">
-              {product.price}
+          <div className="flex items-center justify-center bg-blue-900 text-white px-6 py-4 rounded-lg border-2 border-yellow-400 space-x-4">
+            {/* Phone Icon */}
+            <div className="border-2 border-yellow-400 rounded-full p-3">
+              <svg
+                className="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M2.003 5.884L3.879 5.5c.273-.064.557.03.744.245l1.744 2.034a.75.75 0 01-.04 1.015l-1.334 1.334a11.014 11.014 0 005.303 5.303l1.334-1.334a.75.75 0 011.015-.04l2.034 1.744a.75.75 0 01.245.744l-.384 1.876a.75.75 0 01-.716.602C5.922 18.944 1.057 14.078 1 7.615a.75.75 0 01.602-.731l.401-.001z" />
+              </svg>
+            </div>
+
+            {/* Phone Number */}
+            <span className="text-lg sm:text-xl font-bold">
+             <a href="tel:+18339505496" className="text-lg sm:text-xl font-bold text-white hover:underline">
+              +1 (833) 950-5496
+              </a>
             </span>
           </div>
-          <button onClick={() => handleAddToCart(product)}
-           className="w-full bg-amber-400 hover:bg-amber-700 text-white py-2 rounded-lg transition duration-200 active:scale-75">
-            Add to Cart
-          </button>
-        </div>
-      ))}
-    </div>
-  </div>
 
-  {/* Pagination */}
-  <div className="flex flex-wrap justify-center items-center gap-4 mt-6 sm:mt-10 px-4">
-    <Link to="/">
-      <button className="px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-amber-500 hover:text-white transition duration-200 active:scale-75">
-        1
-      </button>
-    </Link>
-    <Link to="/Shop3">
-      <button className="px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-amber-500 hover:text-white transition duration-200 active:scale-75">
-        2
-      </button>
-    </Link>
-    <Link to="/">
-      <button className="px-4 py-2 bg-amber-400 text-white rounded-md shadow-sm hover:bg-amber-700 transition duration-200 active:scale-75">
-        Next
-      </button>
-    </Link>
-  </div>
-  {/* Floating Call Now Button */}
+          {/* Description */}
+          <p className="text-gray-700 text-center max-w-lg">
+            Need help with your Norton Antivirus installation, renewal or
+            support? <br />
+            Call our toll-free number anytime — we're available 24/7.
+          </p>
+        </div>
+      </div>
+
+      {/* Product Grid */}
+      <div className="px-2 sm:px-4 md:px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="bg-white p-4 sm:p-5 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+            >
+              <img
+                src={product.image}
+                alt={product.title}
+                className="h-40 sm:h-48 w-full object-contain mb-3 sm:mb-4 rounded-lg"
+              />
+              <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">
+                {product.title}
+              </h3>
+              <div className="text-sm sm:text-md mb-3">
+                <span className="line-through text-gray-400 mr-2">
+                  {product.oldPrice}
+                </span>
+                <span className="text-black font-bold text-lg sm:text-xl">
+                  {product.price}
+                </span>
+              </div>
+              <button
+                onClick={() => handleAddToCart(product)}
+                className="w-full bg-amber-400 hover:bg-amber-700 text-white py-2 rounded-lg transition duration-200 active:scale-75"
+              >
+                Add to Cart
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Pagination */}
+      <div className="flex flex-wrap justify-center items-center gap-4 mt-6 sm:mt-10 px-4">
+        <Link to="/">
+          <button className="px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-amber-500 hover:text-white transition duration-200 active:scale-75">
+            1
+          </button>
+        </Link>
+        <Link to="/Shop3">
+          <button className="px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-amber-500 hover:text-white transition duration-200 active:scale-75">
+            2
+          </button>
+        </Link>
+        <Link to="/">
+          <button className="px-4 py-2 bg-amber-400 text-white rounded-md shadow-sm hover:bg-amber-700 transition duration-200 active:scale-75">
+            Next
+          </button>
+        </Link>
+      </div>
+      {/* Floating Call Now Button */}
       <a
         href="tel:+18339505496" // Direct call link
-        className="fixed b-20 right-6 md:bottom-10 md:right-4 bg-yellow-400 text-white p-4 rounded-full shadow-lg hover:bg-yellow-700 transition duration-300 ease-in-out transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-700 z-40 animate-spin" 
+        className="fixed b-20 right-6 md:bottom-10 md:right-4 bg-yellow-400 text-white p-4 rounded-full shadow-lg hover:bg-yellow-700 transition duration-300 ease-in-out transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-700 z-40 animate-spin"
         aria-label="Call Customer Support"
       >
         <FaPhoneAlt className="text-2xl" />
       </a>
-
-</div>
-
+    </div>
   );
 }
 

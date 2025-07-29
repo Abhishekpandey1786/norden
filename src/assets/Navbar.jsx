@@ -9,22 +9,25 @@ function Navbar() {
   const { cartItemCount } = useCart();
   const navigate = useNavigate();
 
-const handleCategoryChange = (e) => {
-  const value = e.target.value;
-  if (value) navigate(value);
-};
+  const handleCategoryChange = (e) => {
+    const value = e.target.value;
+    if (value) navigate(value);
+  };
   return (
     <div className="bg-blue-50  shadow-sm">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row items-center justify-between px-4  md:px-10 py-4 space-y-4 md:space-y-0">
         {/* Logo */}
         <div className="flex-shrink-0">
-        <Link to="/"> <img
-            src={img1}
-            alt="Company Logo"
-            className="h-10 w-auto object-contain"
-            style={{ maxWidth: 140 }}
-          /></Link> 
+          <Link to="/">
+            {" "}
+            <img
+              src={img1}
+              alt="Company Logo"
+              className="h-10 w-auto object-contain"
+              style={{ maxWidth: 140 }}
+            />
+          </Link>
         </div>
 
         {/* Search */}
@@ -34,8 +37,10 @@ const handleCategoryChange = (e) => {
             placeholder="I'm searching for..."
             className="flex-grow px-4 py-2 text-gray-700 outline-none"
           />
-          <select  onChange={handleCategoryChange}
-           className="bg-gray-100 px-3 py-2 text-gray-600 border-l border-gray-300 outline-none">
+          <select
+            onChange={handleCategoryChange}
+            className="bg-gray-100 px-3 py-2 text-gray-600 border-l border-gray-300 outline-none"
+          >
             <option value="">All Categories</option>
             <option value="avast">Avast</option>
             <option value="avg">Avg Antivirus</option>
@@ -97,11 +102,16 @@ const handleCategoryChange = (e) => {
               Privacy Policy
             </li>
           </Link>
-          <Link to="/Call">
-            <li className="hover:text-blue-100 cursor-pointer whitespace-nowrap hover:active:scale-75">
-              Call Now: +1 (833) 950-5496
-            </li>
-          </Link>
+
+          <li className="hover:text-blue-100 cursor-pointer whitespace-nowrap hover:active:scale-75">
+            Call Now:
+            <a
+              href="tel:+18339505496"
+              className="text-lg sm:text-xl font-bold text-white"
+            >
+              +1 (833) 950-5496
+            </a>
+          </li>
         </ul>
       </div>
     </div>

@@ -12,7 +12,6 @@ import FAQ from "./assets/FAQ";
 import Disclaimer from "./assets/Disclaimer";
 import Refund from "./assets/Refund";
 import Privacy from "./assets/Privacy";
-import Call from "./assets/Call";
 import Terms from "./assets/Terms";
 import Cooki from "./assets/Cooki";
 import Checkout from "./assets/Checkout";
@@ -35,7 +34,6 @@ function App() {
         <Route path="/Disclaimer" element={<Disclaimer />} />
         <Route path="/Refund" element={<Refund />} />
         <Route path="/Privacy" element={<Privacy />} />
-        <Route path="/Call" element={<Call />} />
         <Route path="/Terms" element={<Terms />} />
         <Route path="/Cooki" element={<Cooki />} />
         <Route path="/Checkout" element={<Checkout/>}/>
