@@ -16,7 +16,7 @@ function Footer() {
           <h3 className="text-lg font-semibold mb-4 border-b-2 border-amber-400 w-fit pb-1">
             QUICK MENU
           </h3>
-          <ul className="space-y-2  text-2xl">
+          <ul className="space-y-2  text-xl">
             <li><Link to="/Shop" className="hover:text-amber-400 transition-all">Shop</Link></li>
             <li><Link to="/Cart" className="hover:text-amber-400 transition-all">Cart</Link></li>
             <li><Link to="/Checkout" className="hover:text-amber-400 transition-all">Checkout</Link></li>
