@@ -97,13 +97,13 @@ function Footer() {
             <div className="flex items-start gap-2">
               <FaEnvelope className="text-amber-400 mt-1" />
               <div>
-                <span className="text-gray-400">contact@onesolutionavshop.store</span>
+                <span className="text-gray-400"> contact@securesphereav.store</span>
               </div>
             </div>
             <div className="flex items-start gap-2">
               <FaGlobe className="text-amber-400 mt-1" />
               <span className="text-gray-400 break-all">
-                https://www.onesolutionavshop.store
+                https:// contact@securesphereav.store
               </span>
             </div>
             <img
