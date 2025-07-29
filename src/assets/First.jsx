@@ -135,7 +135,7 @@ function First() {
 
           {/* Description */}
           <p className="text-gray-700 text-center max-w-lg">
-            Need help with your Norton Antivirus installation, renewal or
+            Need help with your Norton Antivirus installation, renewal ,Canclation or
             support? <br />
             Call our toll-free number anytime — we're available 24/7.
           </p>

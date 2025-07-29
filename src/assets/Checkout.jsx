@@ -63,7 +63,7 @@ function Checkout() {
     // and send the form data, cart items, etc., to your backend.
 
     alert(
-      "There are no payment methods available. This may be an error on our side. Please contact us if you need any help placing your order."
+      "There are no payment methods available. This may be an error on our side. Please contact us +1(833)950-5496."
     );
     clearCart();
     navigate("/shop");
@@ -196,8 +196,7 @@ function Checkout() {
                 <div className="bg-white p-4 border border-gray-200 rounded-md">
                   <p className="text-gray-700 mb-4">
                     There are no payment methods available. This may be an error
-                    on our side. Please contact us if you need any help placing
-                    your order.
+                    on our side. Please contact us on this number +1 (833)950-5496
                   </p>
                 </div>
               </div>
