@@ -17,6 +17,7 @@ import Cooki from "./assets/Cooki";
 import Checkout from "./assets/Checkout";
 import { CartProvider } from "./contexts/CartContext";
 import Cart from "./assets/Cart";
+import SearchResults from "./assets/SearchResults";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/Cooki" element={<Cooki />} />
         <Route path="/Checkout" element={<Checkout/>}/>
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/search/:keyword" element={<SearchResults />} />
       </Routes>
       <Footer />
       </CartProvider>
